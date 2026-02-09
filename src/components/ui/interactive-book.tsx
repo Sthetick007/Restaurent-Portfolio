@@ -282,7 +282,6 @@ export default function InteractiveBook({
 
             </motion.div>
 
-            {/* Generic Close Button */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.button
@@ -290,7 +289,7 @@ export default function InteractiveBook({
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         onClick={handleCloseBook}
-                        className="absolute top-4 right-4 p-2 rounded-full bg-black/5 hover:bg-black/10 border border-black/10 text-neutral-500 hover:text-neutral-800 transition-all z-50 group"
+                        className="absolute top-4 right-4 p-2 rounded-full bg-white/90 hover:bg-white border border-neutral-200 text-neutral-600 hover:text-neutral-900 shadow-lg transition-all z-50 group"
                         aria-label="Close"
                     >
                         <X size={20} className="group-hover:rotate-90 transition-transform duration-300" />
