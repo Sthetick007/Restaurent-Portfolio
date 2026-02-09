@@ -27,12 +27,6 @@ const reviews = [
     },
 ];
 
-const ratingDensity = [
-    { stars: 5, percentage: 92 },
-    { stars: 4, percentage: 6 },
-    { stars: 3, percentage: 2 },
-    { stars: 2, percentage: 0 },
-];
 
 export function ReviewsSection() {
     return (
@@ -90,30 +84,6 @@ export function ReviewsSection() {
                         ))}
                     </div>
 
-                    {/* Rating Density */}
-                    <div className="bg-dark-lighter p-4 md:p-8 rounded-xl border border-white/5 max-w-4xl mx-auto">
-                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-16">
-                            <div className="text-center md:text-left shrink-0">
-                                <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-bold block mb-0.5 md:mb-1">Rating Density</span>
-                                <div className="text-4xl md:text-6xl font-display font-bold text-white">98%</div>
-                                <div className="text-[10px] md:text-sm text-gray-400 mt-1 md:mt-2">Recommended by guests</div>
-                            </div>
-                            <div className="w-full space-y-2 md:space-y-4">
-                                {ratingDensity.map((item) => (
-                                    <div key={item.stars} className="flex items-center gap-3 md:gap-4 text-xs md:text-sm">
-                                        <span className="w-3 font-bold">{item.stars}</span>
-                                        <div className="flex-1 h-1.5 md:h-2 bg-white/5 rounded-full overflow-hidden">
-                                            <div
-                                                className="h-full bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-full"
-                                                style={{ width: `${item.percentage}%` }}
-                                            />
-                                        </div>
-                                        <span className="w-8 text-right text-gray-400">{item.percentage}%</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
